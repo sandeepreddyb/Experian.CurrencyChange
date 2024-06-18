@@ -9,4 +9,5 @@ decimal totalAmount = Convert.ToDecimal(Console.ReadLine());
 Console.Write("Enter the purchase price:");
 decimal purchasePrice = Convert.ToDecimal(Console.ReadLine());
 ICurrencyOperations uc = new UKCurrencyOperations(purchasePrice, totalAmount);
-uc.GetChange();
+var res = await uc.GetChange();
+uc.PrintOutPut(res);

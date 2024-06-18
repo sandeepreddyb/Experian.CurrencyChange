@@ -5,6 +5,10 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experian.CurrencyChange", "Experian.UkCurrencyChange\Experian.CurrencyChange.csproj", "{2C22323C-397B-4AD1-A48D-49ACDACE3058}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D1D2A0BF-47BF-497A-925E-1EC2A2864DF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyChange.Tests", "CurrencyChange.Tests\CurrencyChange.Tests.csproj", "{77D447D0-BAD3-449F-A87F-95B5647D2653}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{2C22323C-397B-4AD1-A48D-49ACDACE3058}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C22323C-397B-4AD1-A48D-49ACDACE3058}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C22323C-397B-4AD1-A48D-49ACDACE3058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D447D0-BAD3-449F-A87F-95B5647D2653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D447D0-BAD3-449F-A87F-95B5647D2653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D447D0-BAD3-449F-A87F-95B5647D2653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D447D0-BAD3-449F-A87F-95B5647D2653}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{77D447D0-BAD3-449F-A87F-95B5647D2653} = {D1D2A0BF-47BF-497A-925E-1EC2A2864DF2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3523494A-CAD6-47A1-A863-B261E75B3DB1}

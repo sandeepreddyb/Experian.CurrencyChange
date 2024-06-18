@@ -2,6 +2,7 @@
 {
     public interface ICurrencyOperations
     {
-        void GetChange();
+        Task<Dictionary<string, decimal>> GetChange();
+        void PrintOutPut(Dictionary<string, decimal> changeByDenomination);
     }
 }
