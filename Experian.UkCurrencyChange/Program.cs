@@ -12,16 +12,23 @@ do
 
     Console.Write("Enter the purchase price:");
     decimal purchasePrice = Convert.ToDecimal(Console.ReadLine());
+    if(purchasePrice > totalAmount)
+    {
+        Console.WriteLine("Purchase price should not be greater than total amount.");
+        goto repeat;
+    }
     ICurrencyOperations uc = new UKCurrencyOperations(purchasePrice, totalAmount);
     var res = await uc.GetChange();
     uc.PrintOutPut(res);
 
+    //label
+    repeat:
     Console.Write("Do you want to calculate another? (Y/N):");
     restart = Console.ReadLine().ToUpper();
     while ((restart != "Y") && (restart != "N"))
     {
         Console.WriteLine("Error");
-        Console.WriteLine("Do you want to calculate another? (Y/N): ");
+        Console.Write("Do you want to calculate another? (Y/N): ");
         restart = Console.ReadLine().ToUpper();
     }
 } while (restart == "Y");
