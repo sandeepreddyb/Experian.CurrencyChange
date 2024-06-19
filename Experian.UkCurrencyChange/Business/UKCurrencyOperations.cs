@@ -8,13 +8,14 @@ namespace Experian.CurrencyChange.Business
         public decimal GivenAmount { get; set; }
 
         //UK currency denoms in descending order
-        private readonly decimal[] denoms =[]; 
+        private readonly decimal[] denoms;
+
 
         public UKCurrencyOperations(decimal purchasePrice, decimal givenAmount)
         {
             PurchasePrice = purchasePrice;
             GivenAmount = givenAmount;
-            denoms=[ 50m, 20m, 10m, 5m, 2m, 1m, 0.5m, 0.2m, 0.1m, 0.05m, 0.02m, 0.01m ];
+            denoms= new decimal[] { 50m, 20m, 10m, 5m, 2m, 1m, 0.5m, 0.2m, 0.1m, 0.05m, 0.02m, 0.01m };
         }
         public async Task<Dictionary<string, decimal>> GetChange()
         {

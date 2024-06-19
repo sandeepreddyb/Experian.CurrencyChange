@@ -45,5 +45,25 @@ namespace CurrencyChange.Tests
             Assert.NotNull(res);
             Assert.Equal(expectedRes, res);
         }
+        [Fact]
+        public void UKCurrencyOperations_PrintOutPut_Success()
+        {
+            try
+            {
+                ICurrencyOperations _currencyOperations = new UKCurrencyOperations(5.5m, 20m);
+                var expectedRes = new Dictionary<string, decimal>
+                    {
+                        { "10", 1m },
+                        { "2", 2m },
+                        { "0.5", 1m }
+                    };
+                _currencyOperations.PrintOutPut(expectedRes);
+                Assert.True(true);
+            }
+            catch
+            {
+                Assert.True(false);
+            }
+        }
     }
 }
